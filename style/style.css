@@ -14,17 +14,17 @@ html,body{
 }
 
 :root {
-    --primary-color: #032A49;
-    --secondary-color: #C4C5DA;
-    --tertiary-color: #616E9A;
+    --primary-colorv1: #8A307f ;
+    --secondary-colorv2: #79a7d3 ;
+    --tertiary-colorv3: #6883bc ;
     --additional-color: #FFFFFF;
     --font-style: 'Poppins', sans-serif;
     --padding: 60px;
 }
 
 header {
-    background-color: var(--primary-color);
-    padding: 10px 64px 10px 64px;
+    background-color: var(--additional-color);
+    padding: 20px 64px 0px 64px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -39,7 +39,7 @@ header {
     font-size: 16px;
     width: 50px;
     height: 50px;
-    background: var(--primary-color);
+    background-color: var(--primary-colorv1);
     color: var(--additional-color);
     border: none;
     cursor: pointer;
@@ -50,8 +50,9 @@ header {
 
 .logo-img {
     height: 100px;
-    width: 180px;
+    width: 200px;
     background-size: contain;
+
 }
 
 .logo-img img {
@@ -77,26 +78,35 @@ header {
 }
 .navbar ul li a {
     text-decoration: none;
-    color: var(--additional-color);
-    font-size: 14px;
-    font-weight: 600;
-    
+    color: #000000;
+    font-size: 16px;
+    font-weight: 500; 
+}
+
+.navbar ul li .active {
+    color: var(--primary-colorv1);
 }
 
 .navbar ul li a:hover {
-    color: var(--secondary-color);
+    color:#a3649c;
+    transition: ease-in 0.3s;
 }
 
 .nav-btn {
-    border-radius: 18px;
-    background-color: var(--additional-color);
-    padding: 10px 25px;
+    border-radius: 5px;
+    background-color: var(--primary-colorv1);
+    padding: 13px 25px;
     border: none;
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
-    color: var(--primary-color);
+    color: var(--additional-color);
     font-style: var(--font-style);
+}
+
+.nav-btn:hover {
+    background-color: #a3649c;
+    transition: ease-in 0.6s;
 }
 
 /*Go Up Button CSS*/
@@ -107,8 +117,8 @@ header {
     font-size: 16px;
     width: 50px;
     height: 50px;
-    background: var(--secondary-color);
-    color: var(--primary-color);
+    background: var(--primary-colorv1);
+    color: var(--additional-color);
     border: none;
     cursor: pointer;
     display: none;
@@ -118,12 +128,10 @@ header {
 
 /*Welcome CSS*/
 .welcome-section-con {
-    padding: 64px 0 64px 64px;
-    background-color: var(--primary-color);
+    padding: 84px 64px 64px 64px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 90vh;
 }
 
 .welcome-content-con {
@@ -136,31 +144,31 @@ header {
 }
 
 .welcome-content-con .welcome-heading {
-    font-size: 65px;
+    font-size: 75px;
     font-weight: 900;
-    color: var(--secondary-color);
+    color: var(--tertiary-colorv3);
 }
 
 .welcome-content-con .parag-content {
     font-size: 22px;
     font-weight: 400;
     text-align: justify;
+    color: var(--secondary-colorv2);
 }
 
 .welcome-content-con .p-1 {
-    color: var(--additional-color);
+    color: var(--primary-colorv1);
     font-size: 35px;
     font-weight: 600;
 }
 
 .welcome-content-con .p-2 {
     font-size: 22px;
-    font-weight: 600;
-    color: var(--additional-color);
+    font-weight: 500;
+    color: #000000;
 }
 .welcome-img-con {
     width: 40%;
-    height: 650px;
     display: flex;
     align-items: center;
 }
@@ -172,21 +180,23 @@ header {
 
 
 .btn {
-    background-color: var(--additional-color);
-    padding: 15px 30px;
+    background-color: var(--primary-colorv1);
+    padding: 25px 60px;
     color: var(--primary-color);
     border-radius: 18px;
-    font-size: 22px;
-    font-weight: bold;
+    font-size: 18px;
     border: none;
     margin-top: 20px;
     cursor: pointer;
+    text-transform: uppercase;
+    color: var(--additional-color);
 }
 
 /*About Me*/
 .about-me-con {
     padding: 65px;
     display: flex;
+    flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
 }
@@ -202,25 +212,25 @@ header {
 
 .heading {
     font-size: 55px;
-    color: var(--primary-color);
+    color: var(--primary-colorv1);
     font-weight: 900;
 }
 
 .sub-heading {
     font-size: 30px;
-    color: var(--tertiary-color);
+    color: var(--secondary-colorv2);
     font-weight: 600;
 }
 
 .paragraph-content {
     font-size: 22px;
-    color: var(--tertiary-color);
-    font-weight: 400;
+    color: #000000;
+    font-weight: 300;
     text-align: justify;
 }
 
 .secondary {
-    background-color: var(--primary-color);
+    background-color: var(--primary-colorv1);
     color: var(--additional-color);
     font-family: var(--font-style);
     font-size: 16px;
@@ -353,9 +363,13 @@ header {
 
 .services {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
     margin-top: 60px;
+    row-gap: 40px;
 }
+
+
 
 .service {
     width: 30%;
@@ -363,11 +377,14 @@ header {
     flex-direction: column;
     align-items: center;
     row-gap: 30px;
-    padding: 50px;
+    padding: 50px 30px;
     border-radius: 18px;
     flex-wrap: wrap;
     text-align: center;
     padding: 30px 15px;
+    color: #094e86;
+    font-size: 20px;
+  
 }
 
 .service img {
@@ -377,8 +394,9 @@ header {
 }
 
 .service:hover {
-    background-color: #C4C5DA;
-    transition: 0.3s ease-in-out;
+    background-color:#0a2f4e;
+    transition: 0.3s ease-in-out;   
+    color: #fff;
 }
 
 /* Testimonial CSS */
@@ -434,9 +452,11 @@ header {
 
 /*email us CSS*/
 .email-us-form-con {
-    padding: 65px 65px 65px 0px;
+    padding: 0px 0px 0px 0px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    height: 40vh;
+    
   }
   
   .email-us-details-con {
@@ -444,13 +464,14 @@ header {
     display: flex;
     flex-direction: row;
     row-gap: 30px;
-    
+    justify-content: center;
+    align-items: center;
+
   }
 
   .email-img {
-    width: 35%;
-    height: 80%;
-    margin-right: 10px;
+    width: 20%;
+    height: 100%;
   }
 
   .email-img img {
@@ -532,12 +553,50 @@ header {
     transition: ease-in .5s;
   }
 
+  .floating-icons {
+    display: flex;
+    column-gap: 10px;
+   
+}
+
+.floating-icons img {
+    width: 70px;
+    height: 70px;
+}
+
+.floating-element {
+    position: relative;
+    animation: floatAnimation 3s ease-in-out infinite;
+  }
+
+  .item-2 {
+    position: relative;
+    animation: floatAnimation 3.2s ease-in-out infinite;
+  }
+  .item-3 {
+    position: relative;
+    animation: floatAnimation 3.3s ease-in-out infinite;
+  }
+
+  
+/**Floating Element*/
+@keyframes floatAnimation {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+  }
+
+
+
 
 /*Footer */
 
 .footer {
     padding: 30px 65px;
-    background-color: var(--primary-color);
+    background-color: var(--primary-colorv1);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -545,7 +604,7 @@ header {
 }
 
 .footer-heading {
-    color: #D9D9D9;
+    color: #FFF;
     text-transform: uppercase;
     font-size: 35px;
     font-weight: 900;
@@ -553,7 +612,7 @@ header {
 }
 
 .footer-subheading {
-    color: #D9D9D9;
+    color: #FFF;
     font-size: 20px;
     font-weight: 400;
     text-align: center;
@@ -566,9 +625,7 @@ header {
     margin-right: 20px;
 }
 
-.footer .icons i:hover {
-    color: #C4C5DA;
-}
+
 
 
 
